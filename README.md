@@ -1,114 +1,111 @@
 # Let me Ask
 
-Projeto desenvolvido durante um evento da **Rocketseat** para criação de uma plataforma de perguntas e respostas em tempo real.
+Real-time Q&A platform developed during a **Rocketseat** event, enabling interactive question and answer sessions.
 
-## 🚀 Tecnologias
+## 🚀 Technologies
 
 ### Backend
-- **Node.js** - Runtime JavaScript
-- **TypeScript** - Superset tipado do JavaScript
-- **Fastify** - Framework web rápido e eficiente
-- **Zod** - Validação de schemas TypeScript-first
-- **Drizzle ORM** - ORM TypeScript-first
-- **PostgreSQL** - Banco de dados relacional
-- **pgvector** - Extensão PostgreSQL para vetores
+- **Node.js** - JavaScript runtime
+- **TypeScript** - Typed superset of JavaScript
+- **Fastify** - Fast and efficient web framework
+- **Zod** - TypeScript-first schema validation
+- **Drizzle ORM** - TypeScript-first ORM
+- **PostgreSQL** - Relational database
+- **pgvector** - PostgreSQL extension for vectors
 
-### Ferramentas de Desenvolvimento
-- **Biome** - Linter e formatter
-- **Docker** - Containerização
-- **Drizzle Kit** - Migrações de banco de dados
+### Development Tools
+- **Biome** - Linter and formatter
+- **Docker** - Containerization
+- **Drizzle Kit** - Database migrations
 
-## 🏗️ Arquitetura e Padrões
+## 🏗️ Architecture & Patterns
 
-- **API REST** com validação de tipos usando Zod
-- **Type-safe** com TypeScript em toda aplicação
-- **Dependency Injection** através do Fastify
-- **Environment Variables** para configuração
-- **Docker Compose** para desenvolvimento local
+- **REST API** with type validation using Zod
+- **Type-safe** application with TypeScript throughout
+- **Dependency Injection** through Fastify
+- **Environment Variables** for configuration
+- **Docker Compose** for local development
 
-## ⚙️ Configuração do Ambiente
+## ⚙️ Environment Setup
 
-### Pré-requisitos
+### Prerequisites
 - Node.js 18+
-- Docker e Docker Compose
+- Docker and Docker Compose
 - Git
 
-### Instalação
+### Installation
 
-1. **Clone o repositório**
+1. **Clone the repository**
 ```bash
-git clone <url-do-repositorio>
+git clone <repository-url>
 cd let-me-ask/server
 ```
 
-2. **Instale as dependências**
+2. **Install dependencies**
 ```bash
 npm install
 ```
 
-3. **Configure as variáveis de ambiente**
+3. **Configure environment variables**
 ```bash
 cp .env.example .env
 ```
 
-4. **Suba o banco de dados**
+4. **Start the database**
 ```bash
 docker compose up -d
 ```
 
-5. **Execute as migrações**
+5. **Run migrations**
 ```bash
 npx drizzle-kit migrate
 ```
 
-6. **Popule o banco (opcional)**
+6. **Seed the database (optional)**
 ```bash
 npm run db:seed
 ```
 
-## 🏃‍♂️ Executando o Projeto
+## 🏃‍♂️ Running the Project
 
-### Desenvolvimento
+### Development
 ```bash
 npm run dev
 ```
 
-### Produção
+### Production
 ```bash
 npm start
 ```
 
-O servidor estará disponível em `http://localhost:3333`
+The server will be available at `http://localhost:3333`
 
-## 📁 Estrutura do Projeto
+## 📁 Project Structure
 
 ```
 src/
-├── db/          # Configuração do banco e schemas
-├── routes/      # Definição das rotas da API
-├── env.ts       # Validação de variáveis de ambiente
-└── server.ts    # Configuração do servidor
+├── db/          # Database configuration and schemas
+├── routes/      # API route definitions
+├── env.ts       # Environment variables validation
+└── server.ts    # Server configuration
 ```
 
 ## 🐳 Docker
 
-O projeto utiliza PostgreSQL com a extensão pgvector via Docker:
+The project uses PostgreSQL with pgvector extension via Docker:
 
 ```bash
-# Subir o banco
+# Start the database
 docker compose up -d
 
-# Ver logs
+# View logs
 docker compose logs -f
 
-# Parar os containers
+# Stop containers
 docker compose down
 ```
 
-## 📝 Testando a API
+## 📝 Testing the API
 
-Use o arquivo `client.http` para testar os endpoints da API diretamente no VS Code com a extensão REST Client.
+Use the `client.http` file to test API endpoints directly in VS Code with the REST Client extension.
 
----
-
-**Desenvolvido com ❤️ durante evento da Rocketseat**
