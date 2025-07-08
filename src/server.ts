@@ -24,3 +24,5 @@ app.setValidatorCompiler(validatorCompiler);
 app.register(getRoomsRoute);
 
 app.listen({ port: env.PORT });
+
+console.log('🚀 Server is running on port', env.PORT);
