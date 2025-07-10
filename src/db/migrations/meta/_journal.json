@@ -15,6 +15,13 @@
       "when": 1752087799749,
       "tag": "0001_amusing_shinko_yamashiro",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1752162388435,
+      "tag": "0002_yielding_sleepwalker",
+      "breakpoints": true
     }
   ]
 }
